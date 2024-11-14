@@ -12,13 +12,12 @@ function updateActiveLink() {
 }
 
 function toggleModal() {
-  modalNav.classList.toggle('active');
-  if (modalNav.classList.contains('active')) {
+  modalNav.classList.toggle('is-open');
+  if (modalNav.classList.contains('is-open')) {
     updateActiveLink();
   }
 }
-window.addEventListener('scroll', updateActiveLink);
-window.addEventListener('load', updateActiveLink);
+window.addEventListener('scroll', updateActiveLink);window.addEventListener('load', updateActiveLink);
 
 
 
