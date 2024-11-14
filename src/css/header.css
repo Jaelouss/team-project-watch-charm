@@ -2,6 +2,10 @@
 /* Скажи хедеру display: fixed */
 
 /* Приклад підкреслення активного посилання, заміни значеня на дані з макету */
+.menu-link {
+  position: relative;
+}
+
 .menu-link.current::after {
   content: '';
   position: absolute;
