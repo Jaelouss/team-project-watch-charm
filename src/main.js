@@ -3,42 +3,36 @@ const sections = document.querySelectorAll('main section');
 const menuLinks = document.querySelectorAll('.menu-link');
 
 function updateActiveLink() {
-  let index = sections.length;
-  while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+  let index = 0;
+  sections.forEach((section, i) => {
+    if (window.scrollY + 50 >= section.offsetTop) {
+      index = i;
+    }
+  });
+
   menuLinks.forEach((link) => link.classList.remove('current'));
   menuLinks[index].classList.add('current');
 }
 
+// HEADER button закриття і відкриття меню для планшета та мобільного з ресайзом меню
+const sideMenu = document.getElementById("sideMenu");
 
 function openMenu() {
-  document.getElementById("sideMenu").style.width = "250px";
+  let menuWidth = window.innerWidth < 768 ? "200px" : "330px";
+  sideMenu.style.width = menuWidth;
   updateActiveLink();
 }
 
 function closeMenu() {
-  document.getElementById("sideMenu").style.width = "0";
+  sideMenu.style.width = "0";
 }
+
+window.addEventListener('resize', function() {
+  const currentWidth = window.getComputedStyle(sideMenu).width;
+  if (currentWidth !== "0px") {
+    openMenu();
+  }
+});
 
 window.addEventListener('scroll', updateActiveLink);
 window.addEventListener('load', updateActiveLink);
-
-
-// CATALOG button show more
-const toggleBtn = document.getElementById("toggle-btn");
-const hiddenItems = document.querySelectorAll(".product-item.hidden");
-
-toggleBtn.addEventListener("click", function() {
-  const isHidden = hiddenItems[0].style.display === "none" || hiddenItems[0].style.display === "";
-
-  hiddenItems.forEach(item => {
-    item.style.display = isHidden ? "block" : "none";
-  });
-
-  toggleBtn.textContent = isHidden ? "Show less" : "Show more";
-});
-
-hiddenItems.forEach(item => {
-  item.style.display = "none";
-});
-
-
