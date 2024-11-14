@@ -1,4 +1,6 @@
 /* Common styles */
+@import url('../fonts/stylesheet.css');
+@import url('./fonts.css');
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');

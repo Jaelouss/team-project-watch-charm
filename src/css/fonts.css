@@ -1,0 +1,36 @@
+body {
+  font-family: 'Gilroy Medium', sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: rgba(12, 12, 12, 0.7);
+}
+
+h1 {
+  font-family: 'Gilroy Semibold', sans-serif;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 0.875;
+  letter-spacing: -0.02em;
+  color: #0c0c0c;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Gilroy Semibold', sans-serif;
+  font-size: 48px;
+  line-height: 0.91667;
+  letter-spacing: -0.02em;
+  color: #0c0c0c;
+}
+
+span {
+  font-family: 'Gilroy Regular', sans-serif;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: rgba(12, 12, 12, 0.5);
+}
