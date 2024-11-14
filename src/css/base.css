@@ -1,7 +1,12 @@
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fbfbfb;
 }
-
+label,
 button {
   cursor: pointer;
 }
@@ -12,17 +17,23 @@ img {
   height: auto;
 }
 
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
 section {
   padding: 30px 0;
 }
 
-/* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   section {
     padding: 40px 0;
   }
 }
-/* Styles for Desktop devices */
+
 @media only screen and (min-width: 1280px) {
   section {
     padding: 50px 0;
