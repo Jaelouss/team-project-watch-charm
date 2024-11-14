@@ -1,24 +1,26 @@
 // HEADER меню підкреслення активної секції
 const sections = document.querySelectorAll('main section');
 const menuLinks = document.querySelectorAll('.menu-link');
-const modalNav = document.getElementById('modalNav');
 
 function updateActiveLink() {
   let index = sections.length;
-
   while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
   menuLinks.forEach((link) => link.classList.remove('current'));
   menuLinks[index].classList.add('current');
 }
 
-function toggleModal() {
-  modalNav.classList.toggle('is-open');
-  if (modalNav.classList.contains('is-open')) {
-    updateActiveLink();
-  }
-}
-window.addEventListener('scroll', updateActiveLink);window.addEventListener('load', updateActiveLink);
 
+function openMenu() {
+  document.getElementById("sideMenu").style.width = "250px";
+  updateActiveLink();
+}
+
+function closeMenu() {
+  document.getElementById("sideMenu").style.width = "0";
+}
+
+window.addEventListener('scroll', updateActiveLink);
+window.addEventListener('load', updateActiveLink);
 
 
 // CATALOG button show more
