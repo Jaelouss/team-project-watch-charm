@@ -1,1 +1,94 @@
 /* ABOUT-US */
+.title-about-us {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #0c0c0c;
+  margin-bottom: 28px;
+}
+
+.title-text-one {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(12, 12, 12, 0.7);
+  margin-bottom: 20px;
+}
+.title-text-two {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(12, 12, 12, 0.7);
+  margin-bottom: 40px;
+}
+.about-us-anchor {
+  font-family: 'Gilroy', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 16px;
+  width: 160px;
+  height: 48px;
+  background: #3350e9;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  color: #fbfbfb;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.text-content {
+  display: inline-block;
+  border-radius: 30px;
+  max-width: 100%;
+  min-height: 446px;
+  background-color: #f3f3f3;
+  margin-bottom: 20px;
+  padding: 40px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .title-about-us {
+    font-size: 48px;
+    line-height: 0.92;
+    margin-bottom: 40px;
+  }
+  .title-text-one {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .title-text-two {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 60px;
+  }
+  .about-us-anchor {
+    font-size: 14px;
+  }
+  .text-content {
+    min-height: 512px;
+    padding: 80px 60px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    display: flex;
+    gap: 40px;
+  }
+  .title-text-two {
+    margin-bottom: 40px;
+  }
+  .text-content {
+    height: 100%;
+    max-width: 580px;
+    margin-bottom: 0;
+  }
+}
