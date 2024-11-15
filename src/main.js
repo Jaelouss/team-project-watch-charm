@@ -2,6 +2,7 @@
 const sections = document.querySelectorAll('main section');
 const menuLinks = document.querySelectorAll('.menu-link');
 
+// Функція оновлення активного пункту меню
 function updateActiveLink() {
   let index = 0;
   sections.forEach((section, i) => {
@@ -14,18 +15,23 @@ function updateActiveLink() {
   menuLinks[index].classList.add('current');
 }
 
-// HEADER button закриття і відкриття меню для планшета та мобільного з ресайзом меню
 const sideMenu = document.getElementById("sideMenu");
-
+// Функція відкриття та ресайзу бокового меню
 function openMenu() {
   let menuWidth = window.innerWidth < 768 ? "200px" : "330px";
   sideMenu.style.width = menuWidth;
   updateActiveLink();
 }
 
+// Функція закриття бокового меню
 function closeMenu() {
   sideMenu.style.width = "0";
 }
+
+const sideMenuLinks = document.querySelectorAll('#sideMenu .menu-link');
+sideMenuLinks.forEach((link) => {
+  link.addEventListener('click', closeMenu);
+});
 
 window.addEventListener('resize', function() {
   const currentWidth = window.getComputedStyle(sideMenu).width;
@@ -36,3 +42,21 @@ window.addEventListener('resize', function() {
 
 window.addEventListener('scroll', updateActiveLink);
 window.addEventListener('load', updateActiveLink);
+
+
+
+// Зникання HEADER при скролі
+let lastScrollPosition = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  const currentScrollPosition = window.scrollY;
+
+  if (currentScrollPosition > lastScrollPosition) {
+    header.style.transform = 'translateY(-100%)';
+  } else {
+    header.style.transform = 'translateY(0)';
+  }
+
+  lastScrollPosition = currentScrollPosition;
+});
