@@ -1,6 +1,6 @@
 <!-- CATALOG -->
 <section class="catalog">
-<div class="catalog-container">
+<div class="container catalog-container">
 <h2 class="section-catalog">Catalog</h2>
 <ul class="catalog-list">
 <li class="catalog-list-item">
@@ -74,7 +74,7 @@
     </div>
 </li>
 </ul>
-<button class="btn-show">
+<button class="btn-show" id="toggle-btn">
     Show more
 </button>
 </div>
@@ -83,3 +83,12 @@
 <!-- для приховання елементів на мобільному використай .hidden, як другий клас -->
 <!-- використай цю конопку) -->
 <!-- <button id="toggle-btn">Show more</button> -->
+Треба використовувати mobile first.
+Верстка адаптивна, окрім мобільних пристроїв. Точки перелому:
+
+mobile: верстка гумова від 320px, стає адаптивною з 375px;
+tablet: з 768px;
+desktop: з 1280px
+Тобто має бути цсс для мобільного , потім медіа перелом 768 і медіа перелом 1280
+
+Також дуже багато дублюється стилів шрифтів. Треба вичістити

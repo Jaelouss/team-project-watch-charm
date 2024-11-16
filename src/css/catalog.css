@@ -3,6 +3,9 @@
 .hidden {
   display: none;
 }
+.container .catalog-container {
+  margin: 0;
+}
 
 .catalog {
   padding: 100px 65px;
@@ -17,7 +20,7 @@
   color: #0c0c0c; 
   text-align: left; 
   text-transform: capitalize; 
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 } 
 
 .catalog-list {
@@ -29,8 +32,6 @@
 }
 
 .catalog-list-item {
-  width: calc((100% - 46px)/ 3);
-  /*height: 414px; */
   border: 1px solid rgba(12, 12, 12, 0.05);
   border-radius: 30px;
   background: #f3f3f3;
@@ -84,8 +85,13 @@ width: 304px;
   color: #fbfbfb;
   border: 0;
   justify-self: center;
-  margin-top: 40px;
   display: none;
+}
+
+@media only screen and (min-width: 1025px) {
+  .catalog-list-item {
+    width: calc((100% - 46px) / 3);
+  }
 }
 
 @media only screen and (min-width : 768px) 
