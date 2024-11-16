@@ -1,20 +1,11 @@
 /* ABOUT-US */
 .title-about-us {
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 0.91667;
-  letter-spacing: -0.02em;
-  color: #0c0c0c;
-  font-weight: 600;
   font-size: 32px;
   line-height: 1;
-  letter-spacing: -0.02em;
-  color: #0c0c0c;
   margin-bottom: 28px;
 }
 
 .title-text-one {
-  font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
@@ -22,7 +13,6 @@
   margin-bottom: 20px;
 }
 .title-text-two {
-  font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
@@ -36,7 +26,7 @@
   width: 160px;
   height: 48px;
   background: #3350e9;
-  font-weight: 500;
+
   font-size: 14px;
   line-height: 1.29;
   text-align: center;
@@ -86,7 +76,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .container {
+  .about-us-container {
     display: flex;
     gap: 40px;
   }
