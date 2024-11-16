@@ -3,20 +3,20 @@
   margin-bottom: 24px;
 }
 
-.image-container {
+.sale-image-container {
   margin-bottom: 20px;
 }
 
-.image-row {
+.sale-image-row {
   margin-bottom: 20px;
 }
 
-.image-row-list {
+.sale-image-row-list {
   display: flex;
   gap: 5px;
 }
 
-.image-row-item {
+.sale-image-row-item {
   width: 80px;
   height: 80px;
   display: flex;
@@ -27,7 +27,7 @@
   background-color: #f3f3f3;
 }
 
-.image-large-container {
+.sale-image-large-container {
   width: auto;
   height: 385px;
   border: 1px solid rgba(12, 12, 12, 0.05);
@@ -38,34 +38,34 @@
   background-color: #f3f3f3;
 }
 
-.info-container {
+.sale-info-container {
   width: auto;
   padding: 48px 28px;
   border-radius: 30px;
   background-color: #3350e9;
 }
 
-.info-title {
+.sale-info-title {
   font-size: 24px;
   color: #fbfbfb;
   margin-bottom: 10px;
 }
 
-.product-tag-text {
+.sale-product-tag-text {
   font-weight: 400;
   font-size: 14px;
   color: rgba(251, 251, 251, 0.5);
   margin-bottom: 20px;
 }
 
-.price {
+.sale-price {
   display: flex;
   align-items: center;
   gap: 9px;
   margin-bottom: 28px;
 }
 
-.current-price-container {
+.sale-current-price-container {
   display: inline-block;
   background: rgba(251, 251, 251, 0.1);
   border-radius: 8px;
@@ -74,7 +74,7 @@
   padding: 8px 12px;
 }
 
-.current-price-text {
+.sale-current-price-text {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,32 +82,32 @@
   color: #fbfbfb;
 }
 
-.old-price-text {
+.sale-old-price-text {
   text-decoration: line-through;
   font-weight: 400;
   font-size: 12px;
   color: rgba(251, 251, 251, 0.5);
 }
 
-.description-text {
+.sale-description-text {
   font-size: 14px;
   margin-bottom: 28px;
 }
 
-.features-list {
+.sale-features-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.features-item {
+.sale-features-item {
   display: inline-block;
   border: 1px solid rgba(251, 251, 251, 0.2);
   border-radius: 8px;
   padding: 8px 12px;
 }
 
-.features-text {
+.sale-features-text {
   font-size: 12px;
   color: #fbfbfb;
 }
@@ -120,81 +120,81 @@
     margin-bottom: 40px;
   }
 
-  .image-container {
+  .sale-image-container {
     height: 558px;
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
   }
 
-  .image-row {
+  .sale-image-row {
     margin-right: 20px;
     margin-bottom: 0;
     max-width: 132px;
   }
 
-  .image-row-list {
+  .sale-image-row-list {
     flex-direction: column;
     gap: 10px;
   }
 
-  .image-row-item {
+  .sale-image-row-item {
     width: 132px;
     height: 132px;
     border-radius: 20px;
   }
 
-  .image-row-item img {
+  .sale-image-row-item img {
     width: 96px;
     height: 100px;
   }
 
-  .image-large-container {
+  .sale-image-large-container {
     border-radius: 50px;
     width: 552px;
     height: 558px;
     border-radius: 50px;
   }
 
-  .image-large-container img {
+  .sale-image-large-container img {
     width: 328px;
     height: 398px;
     object-fit: contain;
   }
 
-  .info-container {
+  .sale-info-container {
     padding: 60px;
   }
 
-  .info-title {
+  .sale-info-title {
     width: 436px;
     font-size: 32px;
   }
 
-  .price {
+  .sale-price {
     margin-bottom: 30px;
   }
 
-  .current-price-container {
+  .sale-current-price-container {
     width: 78px;
   }
 
-  .current-price-text {
+  .sale-current-price-text {
     font-weight: 600;
     font-size: 20px;
     line-height: 1;
   }
 
-  .description-text {
+  .sale-description-text {
     font-size: 16px;
     margin-bottom: 40px;
   }
 
-  .features {
+  .sale-features {
     max-width: 398px;
   }
 
-  .features-text {
+  .sale-features-text {
     font-size: 14px;
   }
 }
@@ -202,30 +202,30 @@
 /*--------------------Media Desktop--------------------*/
 
 @media only screen and (min-width: 1280px) {
-  .product-details-container {
+  .sale-product-details-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
   }
 
-  .image-container {
+  .sale-image-container {
     margin-bottom: 0;
   }
 
-  .image-large-container {
+  .sale-image-large-container {
     max-width: 428px;
   }
 
-  .info-container {
+  .sale-info-container {
     max-width: 530px;
     height: 558px;
   }
-  .info-title {
+  .sale-info-title {
     width: 389px;
   }
 
-  .features {
+  .sale-features {
     width: auto;
   }
 }
