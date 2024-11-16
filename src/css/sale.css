@@ -1,6 +1,5 @@
 .sale-title {
   font-size: 32px;
-  line-height: 1;
   margin-bottom: 24px;
 }
 
@@ -48,7 +47,6 @@
 
 .info-title {
   font-size: 24px;
-  line-height: 1.16667;
   color: #fbfbfb;
   margin-bottom: 10px;
 }
@@ -56,8 +54,6 @@
 .product-tag-text {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.28571;
-  letter-spacing: -0.02em;
   color: rgba(251, 251, 251, 0.5);
   margin-bottom: 20px;
 }
@@ -90,14 +86,11 @@
   text-decoration: line-through;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
-  text-decoration: line-through;
   color: rgba(251, 251, 251, 0.5);
 }
 
 .description-text {
   font-size: 14px;
-  line-height: 1.28571;
   margin-bottom: 28px;
 }
 
@@ -116,7 +109,6 @@
 
 .features-text {
   font-size: 12px;
-  line-height: 1.33333;
   color: #fbfbfb;
 }
 
@@ -125,7 +117,6 @@
 @media only screen and (min-width: 768px) {
   .sale-title {
     font-size: 48px;
-    line-height: 0.91667;
     margin-bottom: 40px;
   }
 
@@ -160,16 +151,9 @@
 
   .image-large-container {
     border-radius: 50px;
-    margin-bottom: 0;
-    width: 552px; /* Фіксуємо ширину */
-    height: 558px; /* Фіксуємо висоту */
-    padding: 0; /* Видаляємо внутрішні відступи */
-    border: 1px solid rgba(12, 12, 12, 0.05);
+    width: 552px;
+    height: 558px;
     border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f3f3f3;
   }
 
   .image-large-container img {
@@ -185,7 +169,6 @@
   .info-title {
     width: 436px;
     font-size: 32px;
-    line-height: 1.125;
   }
 
   .price {
@@ -204,7 +187,7 @@
 
   .description-text {
     font-size: 16px;
-    line-height: 1.25;
+    margin-bottom: 40px;
   }
 
   .features {
@@ -213,7 +196,6 @@
 
   .features-text {
     font-size: 14px;
-    line-height: 1.28571;
   }
 }
 
