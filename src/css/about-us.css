@@ -25,7 +25,7 @@
   border-radius: 16px;
   width: 160px;
   height: 48px;
-  background: #3350e9;
+  background-color: #3350e9;
 
   font-size: 14px;
   line-height: 1.29;
@@ -33,10 +33,11 @@
   color: #fbfbfb;
   padding-top: 15px;
   padding-bottom: 15px;
+  transition: background-color 250ms cubic-bezier(0, 0, 0.58, 1);
 }
 .about-us-anchor:hover,
 .about-us-anchor:focus {
-  background: #1f3cd4;
+  background-color: #1f3cd4;
 }
 .text-content {
   display: inline-block;
@@ -72,6 +73,7 @@
     padding: 80px 60px;
     margin-bottom: 40px;
     min-height: 446px;
+    border-radius: 50px;
   }
 }
 
