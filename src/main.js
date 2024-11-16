@@ -90,26 +90,46 @@ function handleScroll() {
   lastScrollPosition = currentScrollPosition;
 }
 
-// Catalog button
-document.getElementById("toggle-btn").addEventListener("click", function() {
-    // Знаходимо всі елементи з класом .hidden-item
-    const hiddenItems = document.querySelectorAll(".hidden-item");
+document.getElementById('toggle-btn').addEventListener('click', function() {
+  const items = document.querySelectorAll('.catalog-list-item.hidden');
+  
+  // Перевіряємо ширину екрану
+  if (window.innerWidth < 768) {
+    let isHidden = false;
+    
+    // Перевіряємо, чи всі елементи сховані
+    items.forEach(item => {
+      if (item.style.display === 'none' || item.style.display === '') {
+        isHidden = true;
+      }
+    });
 
-    hiddenItems.forEach(item => {
-        // Перевіряємо поточний стиль і перемикаємо його
-        if (item.style.display === "none" || item.style.display === "") {
-            item.style.display = "block"; // Показуємо елемент
-        } else {
-            item.style.display = "none"; // Приховуємо елемент
-        }
+    // Якщо елементи сховані, показуємо їх, інакше - ховаємо
+    items.forEach(item => {
+      if (isHidden) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
     });
 
     // Змінюємо текст кнопки
-    if (this.textContent === "Show more") {
-        this.textContent = "Hide";
+    if (isHidden) {
+      this.innerText = 'Hide';
     } else {
-        this.textContent = "Show more";
+      this.innerText = 'Show More';
     }
+  }
 });
 
-
+// Відслідковуємо зміну розміру екрану
+window.addEventListener('resize', function() {
+  // Якщо ширина екрану >= 768px, всі сховані елементи повинні бути показані
+  if (window.innerWidth >= 768) {
+    const items = document.querySelectorAll('.catalog-list-item.hidden');
+    items.forEach(item => {
+      // Встановлюємо display: block
+      item.style.display = 'block';
+    });
+  }
+});
