@@ -94,9 +94,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .catalog {
-    padding: 100px 32px;
-  }
   .catalog-list {
     gap: 32px 16px;
   }
