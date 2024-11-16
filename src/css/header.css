@@ -1,5 +1,5 @@
 /* HEADER */
-/* Для зникання та появи хедера при скролі */
+
 header {
   position: fixed;
   top: 0;
@@ -7,36 +7,229 @@ header {
   width: 100%;
   transition: transform 0.3s ease-in-out;
   z-index: 998;
+  border-bottom: 1px solid #e7e9fc;
+  background-color: #fbfbfb;
 }
 
-/* Для бокового меню, зміни що потрібно, не чіпай тільки перші 6 пунктів */
-#sideMenu {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: auto;
+}
+
+.logo-header {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #0c0c0c;
+  padding: 28px 0;
+}
+
+.nav-header {
+  display: none;
+}
+
+/* Burger button*/
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-menu .bar {
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+/* Бокове меню */
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  height: 100%;
-  width: 0; /* Початкова ширина - закрите меню */
-  z-index: 1000;
+  right: 0;
   overflow-x: hidden;
-  transition: 0.3s; /* Анімація відкриття/закриття */
-  padding-top: 20px;
-  background-color: #333;
-  color: white;
+  transition: 0.3s;
+  z-index: 999;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #0c0c0c;
+  background-image: url(/img/mob/mob-menu-hero.jpg);
 }
 
-/* Приклад підкреслення активного посилання, заміни значеня на дані з макету */
+@media (min-resolution: 192dpi) {
+  .side-menu {
+    background-image: url(/img/mob/mob-menu-hero@2x.jpg);
+  }
+}
+
+/* Close button style */
+.side-menu .close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-list-mob {
+  text-align: center;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: auto;
+}
+
 .menu-link {
   position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  text-align: center;
+  color: #fbfbfb;
 }
 
-.menu-link.current::after {
+.menu-link-mob {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  text-align: center;
+  color: #fbfbfb;
+}
+
+.menu-link.current-circle::after,
+.menu-link-mob.current-circle::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -50%;
   left: 50%;
   transform: translateX(-50%);
-  width: 8px; /* Розмір крапки */
+  width: 8px;
   height: 8px;
-  background-color: blue; /* Колір крапки */
-  border-radius: 50%; /* Щоб зробити крапку круглою */
+  background-color: #3350e9;
+  border-radius: 50%;
+}
+
+.mob-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+
+.mob-icons {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(251, 251, 251, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mob-social-icons {
+  fill: #fbfbfb;
+  opacity: 0.8;
+}
+
+.mob-social-icons:hover,
+.mob-social-icons:focus {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo-header {
+    font-size: 20px;
+    margin-right: 203px;
+    padding: 34px 0;
+  }
+  .side-menu {
+    background-image: url(/img/tab/tab-menu-hero.jpg);
+  }
+
+  @media (min-resolution: 192dpi) {
+    .side-menu {
+      background-image: url(/img/tab/tab-menu-hero@2.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .nav-header {
+    display: flex;
+  }
+
+  .burger-menu,
+  .side-menu {
+    display: none;
+  }
+
+  .header-container {
+    justify-content: flex-start;
+  }
+
+  .logo-header {
+    margin-right: 203px;
+    padding: 32px 0;
+  }
+
+  .nav-list-header {
+    display: flex;
+    gap: 40px;
+    margin-right: 203px;
+  }
+
+  .nav-item-header {
+    padding: 30px 0 40px;
+    width: max-content;
+  }
+
+  .header-social {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 10px;
+    padding: 26px 0;
+  }
+  .menu-link {
+    color: #0c0c0c;
+  }
+  .header-icons {
+    border: 1px solid rgba(12, 12, 12, 0.1);
+    border-radius: 10px;
+    padding: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-social-icons {
+    fill: #0c0c0c;
+    transition: fill 0.3s ease-out;
+  }
+
+  .header-social-icons:hover,
+  .header-social:focus {
+    fill: #3350e9;
+  }
 }
