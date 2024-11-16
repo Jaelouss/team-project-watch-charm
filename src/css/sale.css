@@ -1,1 +1,249 @@
-/* SALE */
+.sale-title {
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.image-container {
+  margin-bottom: 20px;
+}
+
+.image-row {
+  margin-bottom: 20px;
+}
+
+.image-row-list {
+  display: flex;
+  gap: 5px;
+}
+
+.image-row-item {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(12, 12, 12, 0.05);
+  border-radius: 16px;
+  background-color: #f3f3f3;
+}
+
+.image-large-container {
+  width: auto;
+  height: 385px;
+  border: 1px solid rgba(12, 12, 12, 0.05);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+}
+
+.info-container {
+  width: auto;
+  padding: 48px 28px;
+  border-radius: 30px;
+  background-color: #3350e9;
+}
+
+.info-title {
+  font-size: 24px;
+  line-height: 1.16667;
+  color: #fbfbfb;
+  margin-bottom: 10px;
+}
+
+.product-tag-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: rgba(251, 251, 251, 0.5);
+  margin-bottom: 20px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 28px;
+}
+
+.current-price-container {
+  display: inline-block;
+  background: rgba(251, 251, 251, 0.1);
+  border-radius: 8px;
+  width: 68px;
+  height: 32px;
+  padding: 8px 12px;
+}
+
+.current-price-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #fbfbfb;
+}
+
+.old-price-text {
+  text-decoration: line-through;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  text-decoration: line-through;
+  color: rgba(251, 251, 251, 0.5);
+}
+
+.description-text {
+  font-size: 14px;
+  line-height: 1.28571;
+  margin-bottom: 28px;
+}
+
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.features-item {
+  display: inline-block;
+  border: 1px solid rgba(251, 251, 251, 0.2);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.features-text {
+  font-size: 12px;
+  line-height: 1.33333;
+  color: #fbfbfb;
+}
+
+/*--------------------Media Tablet--------------------*/
+
+@media only screen and (min-width: 768px) {
+  .sale-title {
+    font-size: 48px;
+    line-height: 0.91667;
+    margin-bottom: 40px;
+  }
+
+  .image-container {
+    height: 558px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .image-row {
+    margin-right: 20px;
+    margin-bottom: 0;
+    max-width: 132px;
+  }
+
+  .image-row-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-row-item {
+    width: 132px;
+    height: 132px;
+    border-radius: 20px;
+  }
+
+  .image-row-item img {
+    width: 96px;
+    height: 100px;
+  }
+
+  .image-large-container {
+    border-radius: 50px;
+    margin-bottom: 0;
+    width: 552px; /* Фіксуємо ширину */
+    height: 558px; /* Фіксуємо висоту */
+    padding: 0; /* Видаляємо внутрішні відступи */
+    border: 1px solid rgba(12, 12, 12, 0.05);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+  }
+
+  .image-large-container img {
+    width: 328px;
+    height: 398px;
+    object-fit: contain;
+  }
+
+  .info-container {
+    padding: 60px;
+  }
+
+  .info-title {
+    width: 436px;
+    font-size: 32px;
+    line-height: 1.125;
+  }
+
+  .price {
+    margin-bottom: 30px;
+  }
+
+  .current-price-container {
+    width: 78px;
+  }
+
+  .current-price-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .description-text {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .features {
+    max-width: 398px;
+  }
+
+  .features-text {
+    font-size: 14px;
+    line-height: 1.28571;
+  }
+}
+
+/*--------------------Media Desktop--------------------*/
+
+@media only screen and (min-width: 1280px) {
+  .product-details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .image-container {
+    margin-bottom: 0;
+  }
+
+  .image-large-container {
+    max-width: 428px;
+  }
+
+  .info-container {
+    max-width: 530px;
+    height: 558px;
+  }
+  .info-title {
+    width: 389px;
+  }
+
+  .features {
+    width: auto;
+  }
+}
