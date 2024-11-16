@@ -5,6 +5,8 @@ html,
 
 body {
   background-color: #fbfbfb;
+  margin-top: 160px;
+  font-family: 'Gilroy', sans-serif;
 }
 label,
 button {
