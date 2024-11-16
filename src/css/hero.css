@@ -26,16 +26,23 @@
   margin-bottom: 28px;
 }
 .image-scroll-container {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   margin-bottom: 28px;
 }
 .image-container {
   display: flex;
-  position: relative;
   width: 132px;
   height: 60px;
   align-items: start;
+}
+.image-list {
+  display: flex;
+  position: relative;
+  width: 132px;
+  height: 60px;
 }
 .overlay1 {
   position: absolute;
