@@ -4,7 +4,7 @@ function calculatePercentage(objectWidth, containerWidth) {
 }
 
 
-let objectWidth = 335; // Введіть розмір об'єкта в пікселях
+let objectWidth = 80; // Введіть розмір об'єкта в пікселях
 let containerWidth = 320;
 
 let percentage = calculatePercentage(objectWidth, containerWidth);
