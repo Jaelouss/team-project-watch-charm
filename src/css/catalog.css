@@ -20,7 +20,8 @@
   flex-wrap: wrap;  
   display: flex;
   list-style: none;
-  margin-bottom: 0;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 .catalog-list-item {
