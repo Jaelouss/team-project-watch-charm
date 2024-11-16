@@ -7,13 +7,10 @@
   margin-bottom: 20px;
 }
 
-.sale-image-row {
-  margin-bottom: 20px;
-}
-
 .sale-image-row-list {
   display: flex;
   gap: 5px;
+  margin-bottom: 20px;
 }
 
 .sale-image-row-item {
@@ -39,7 +36,6 @@
 }
 
 .sale-info-container {
-  width: auto;
   padding: 48px 28px;
   border-radius: 30px;
   background-color: #3350e9;
@@ -65,26 +61,16 @@
   margin-bottom: 28px;
 }
 
-.sale-current-price-container {
-  display: inline-block;
-  background: rgba(251, 251, 251, 0.1);
-  border-radius: 8px;
-  width: 68px;
-  height: 32px;
-  padding: 8px 12px;
-}
-
 .sale-current-price-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: 600;
   color: #fbfbfb;
+  background: rgba(251, 251, 251, 0.1);
+  border-radius: 8px;
+  padding: 8px 12px;
 }
 
 .sale-old-price-text {
   text-decoration: line-through;
-  font-weight: 400;
   font-size: 12px;
   color: rgba(251, 251, 251, 0.5);
 }
@@ -101,7 +87,6 @@
 }
 
 .sale-features-item {
-  display: inline-block;
   border: 1px solid rgba(251, 251, 251, 0.2);
   border-radius: 8px;
   padding: 8px 12px;
@@ -121,27 +106,24 @@
   }
 
   .sale-image-container {
-    height: 558px;
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
   }
 
-  .sale-image-row {
-    margin-right: 20px;
-    margin-bottom: 0;
-    max-width: 132px;
-  }
-
   .sale-image-row-list {
     flex-direction: column;
     gap: 10px;
+    max-width: 132px;
+    margin-bottom: 0;
+    margin-right: 20px;
   }
 
   .sale-image-row-item {
     width: 132px;
     height: 132px;
     border-radius: 20px;
+    margin-right: 0;
   }
 
   .sale-image-row-item img {
@@ -150,7 +132,6 @@
   }
 
   .sale-image-large-container {
-    border-radius: 50px;
     width: 552px;
     height: 558px;
     border-radius: 50px;
@@ -175,22 +156,12 @@
     margin-bottom: 30px;
   }
 
-  .sale-current-price-container {
-    width: 78px;
-  }
-
-  .sale-current-price-text {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1;
-  }
-
   .sale-description-text {
     font-size: 16px;
     margin-bottom: 40px;
   }
 
-  .sale-features {
+  .sale-features-list {
     max-width: 398px;
   }
 
@@ -206,7 +177,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
   }
 
   .sale-image-container {
@@ -223,9 +193,5 @@
   }
   .sale-info-title {
     width: 389px;
-  }
-
-  .sale-features {
-    width: auto;
   }
 }
