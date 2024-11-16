@@ -1,7 +1,7 @@
-
 // Вибір елементів
 const sections = document.querySelectorAll('main section');
-const menuLinks = document.querySelectorAll('.menu-link');
+const menuLinksDesktop = document.querySelectorAll('.menu-link'); // Для десктопу
+const menuLinksMobile = document.querySelectorAll('.menu-link-mob'); // Для мобільного меню
 const sideMenu = document.getElementById("sideMenu");
 const header = document.querySelector('header');
 let lastScrollPosition = 0;
@@ -9,7 +9,7 @@ let lastScrollPosition = 0;
 // Додавання обробників подій
 document.querySelector('.burger-menu').addEventListener('click', openMenu);
 document.querySelector('.close-menu').addEventListener('click', closeMenu);
-const sideMenuLinks = document.querySelectorAll('#sideMenu .menu-link');
+const sideMenuLinks = document.querySelectorAll('#sideMenu .menu-link-mob');
 sideMenuLinks.forEach((link) => link.addEventListener('click', closeMenu));
 window.addEventListener('resize', resizeMenu);
 window.addEventListener('scroll', handleScroll);
@@ -32,8 +32,24 @@ function updateActiveLink() {
     });
   }
 
-  menuLinks.forEach((link) => link.classList.remove('current'));
-  menuLinks[index].classList.add('current');
+  // Очищення класу current-circle для всіх посилань
+  document.querySelectorAll('.menu-link, .menu-link-mob').forEach((link) => link.classList.remove('current-circle'));
+
+  // Додавання класу current-circle до активного пункту
+  const activeDesktopLinks = document.querySelectorAll(`.menu-link[href="#${sections[index].id}"]`);
+  const activeMobileLinks = document.querySelectorAll(`.menu-link-mob[href="#${sections[index].id}"]`);
+  
+  activeDesktopLinks.forEach((link) => link.classList.add('current-circle'));
+  activeMobileLinks.forEach((link) => link.classList.add('current-circle'));
+
+  // Якщо сторінка на початку, вручну додаємо current-circle на перший пункт меню (Home)
+  if (window.scrollY === 0) {
+    const firstDesktopLink = document.querySelector('.menu-link');
+    const firstMobileLink = document.querySelector('.menu-link-mob');
+    
+    if (firstDesktopLink) firstDesktopLink.classList.add('current-circle');
+    if (firstMobileLink) firstMobileLink.classList.add('current-circle');
+  }
 }
 
 // Функція відкриття бокового меню
@@ -43,8 +59,7 @@ function openMenu() {
 
   // Явно активуємо "Home", якщо сторінка на початку
   if (window.scrollY === 0) {
-    menuLinks.forEach((link) => link.classList.remove('current'));
-    menuLinks[0].classList.add('current');
+    updateActiveLink();
   }
 }
 
@@ -61,6 +76,7 @@ function resizeMenu() {
   }
 }
 
+
 // Функція приховування хедера при скролі
 function handleScroll() {
   const currentScrollPosition = window.scrollY;
@@ -74,19 +90,26 @@ function handleScroll() {
   lastScrollPosition = currentScrollPosition;
 }
 
-document.getElementById("toggleButton").addEventListener("click", function() {
-    // Знаходимо всі елементи з класом .hidden
+// Catalog button
+document.getElementById("toggle-btn").addEventListener("click", function() {
+    // Знаходимо всі елементи з класом .hidden-item
     const hiddenItems = document.querySelectorAll(".hidden-item");
 
-    // Перемикаємо видимість елементів
     hiddenItems.forEach(item => {
-        item.classList.toggle("hidden");
+        // Перевіряємо поточний стиль і перемикаємо його
+        if (item.style.display === "none" || item.style.display === "") {
+            item.style.display = "block"; // Показуємо елемент
+        } else {
+            item.style.display = "none"; // Приховуємо елемент
+        }
     });
 
-    // Змінюємо текст кнопки в залежності від стану
+    // Змінюємо текст кнопки
     if (this.textContent === "Show more") {
         this.textContent = "Hide";
     } else {
         this.textContent = "Show more";
     }
 });
+
+

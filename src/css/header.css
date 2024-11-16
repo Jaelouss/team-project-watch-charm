@@ -105,7 +105,17 @@ header {
   color: #fbfbfb;
 }
 
-.menu-link.current::after {
+.menu-link-mob {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  text-align: center;
+  color: #fbfbfb;
+}
+
+.menu-link.current-circle::after,
+.menu-link-mob.current-circle::after {
   content: '';
   position: absolute;
   bottom: -50%;
