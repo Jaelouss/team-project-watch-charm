@@ -3,13 +3,117 @@
 .hidden {
   display: none;
 }
+.container .catalog-container {
+  margin: 0;
+}
 
-@media only screen and (min-width: 768px) {
-  .hidden {
-    display: flex;
+.catalog {
+  box-sizing: border-box;
+}
+
+.section-catalog {
+  margin-bottom: 40px;
+} 
+
+.catalog-list {
+  gap: 32px 23px; 
+  flex-wrap: wrap;  
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.catalog-list-item {
+  border: 1px solid rgba(12, 12, 12, 0.05);
+  border-radius: 30px;
+  background: #f3f3f3;
+  padding: 24px 32px;
+  box-sizing: border-box;
+}
+
+.catalog-item-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.catalog-item-box img {
+width: 304px;
+}
+.catalog-item-box p {
+  align-self: flex-start;
+  width: 304px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+  
+.section-header-brand {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #0c0c0c;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.price span {
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: rgba(12, 12, 12, 0.5);
+}
+.btn-show {
+  border-radius: 16px;
+  width: 160px;
+  height: 48px;
+  background: #3350e9;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  text-align: center;
+  color: #fbfbfb;
+  border: 0;
+  justify-self: center;
+  display: none;
+}
+
+@media only screen and (min-width: 1280px) {
+  .catalog-list-item {
+    width: calc((100% - 46px) / 3);
   }
+}
 
-  #toggle-btn {
+@media only screen and (min-width : 768px) 
+and (max-width : 1024px) {
+  .catalog {
+    padding: 100px 32px;
+  }
+  .catalog-list {
+    gap: 32px 16px; 
+  }
+  .catalog-list-item {
+    width: calc((100% - 23px)/ 2);
+  }
+}
+
+@media screen and (max-width:767px) {
+  .catalog-list-item {
+    width: 100%;
+  }
+  .catalog-list {
+    gap: 20px; 
+  }
+  .hidden-item {
     display: none;
+  }
+  .btn-show {
+    display: block;
   }
 }
