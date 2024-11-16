@@ -8,18 +8,10 @@
 }
 
 .catalog {
-  padding: 100px 65px;
   box-sizing: border-box;
 }
 
 .section-catalog {
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 0.92;
-  letter-spacing: -0.02em;
-  color: #0c0c0c; 
-  text-align: left; 
-  text-transform: capitalize; 
   margin-bottom: 40px;
 } 
 
@@ -28,7 +20,7 @@
   flex-wrap: wrap;  
   display: flex;
   list-style: none;
-  padding: 0;
+  margin-bottom: 0;
 }
 
 .catalog-list-item {
@@ -51,17 +43,20 @@ width: 304px;
 }
 .catalog-item-box p {
   align-self: flex-start;
+  width: 304px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
   
 .section-header-brand {
-  font-family: "Gilroy", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #0c0c0c;
-  padding-top: 10px;
-  padding-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 .price span {
@@ -88,7 +83,7 @@ width: 304px;
   display: none;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1280px) {
   .catalog-list-item {
     width: calc((100% - 46px) / 3);
   }
@@ -108,9 +103,6 @@ and (max-width : 1024px) {
 }
 
 @media screen and (max-width:767px) {
-  .catalog {
-    padding: 100px 20px;
-  }
   .catalog-list-item {
     width: 100%;
   }
