@@ -1,1 +1,66 @@
 /* REVIEWS */
+
+.reviews-title {
+    margin-bottom: 24px;
+    font-size: 32px;
+}
+
+.list-foto {
+    margin-bottom: 24px;
+}
+
+.list {
+    border-radius: 30px;
+    padding: 32px 36px;
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-name {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 110%;
+}
+
+.reviews-text {
+    font-size: 14px;
+    text-align: center;
+    color: rgba(12, 12, 12, 0.4);
+}
+
+.tablet, .desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .tablet {
+            display: flex;
+        }
+
+    .reviews-list-wrapper {
+            display: flex;
+            gap: 16px;   
+        }
+
+    .reviews-text {
+        font-size: 16px;
+    }
+
+    .reviews-title {
+        margin-bottom: 40px;
+        font-size: 48px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .desktop {
+        display: flex;
+    }
+
+    .reviews-list-wrapper {
+            gap: 20px;
+        }
+}
