@@ -38,20 +38,10 @@
   border: 1px solid rgba(12, 12, 12, 0.05);
   border-radius: 30px;
   background: #f3f3f3;
-  padding: 24px 32px;
+  padding: 28px 24px;
   box-sizing: border-box;
 }
 
-.catalog-item-box {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.catalog-item-box img {
-  width: 304px;
-}
 .catalog-item-box p {
   align-self: flex-start;
   width: 304px;
@@ -61,10 +51,6 @@
 }
 
 .section-header-brand {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
-  letter-spacing: -0.02em;
   color: #0c0c0c;
   margin-top: 10px;
   margin-bottom: 8px;
@@ -106,10 +92,16 @@
   .btn-show {
     display: none;
   }
+  .catalog-item-box p {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
   .catalog-list-item {
     width: calc((100% - 46px) / 3);
+  }
+  .catalog-list {
+    gap: 32px 23px;
   }
 }
