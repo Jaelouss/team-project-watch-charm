@@ -1,5 +1,5 @@
 <!-- CONTACT-US -->
-<section class="contact-us-section section">
+<section class="section" id="contact-us">
     <div class="container">
         <h2 class="contact-us-title">Contact us</h2>
         <div class="contact-us-wrapper">
@@ -9,24 +9,36 @@
                     Enter your name, email, phone, and message 
                     and we'll get back to you shortly.
                 </p>
-                <input class="contact-us-input" type="text" name="user-name" placeholder="Name" required>
+                <label for="user-name"></label>
+                <input
+                    class="contact-us-input"
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                    placeholder="Name"
+                    required
+                >
+                <label for="user-email"></label>
                 <input
                     class="contact-us-input"
                     type="email"
+                    id="user-email"
                     name="user-email"
                     placeholder="Email"
                     pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
                     required
                 >
+                <label for="user-phone"></label>
                 <input
                     class="contact-us-input"    
                     type="tel"
+                    id="user-phone"
                     name="user-phone"
                     placeholder="+380"
                     pattern="^\+\d{3}-\d{2}-\d{3}-\d{2}-\d{2}$"
                     required
                 >
-                <textarea class="contact-us-comment" name="user-comment" placeholder="Comment"></textarea>
+                <textarea class="contact-us-comment" name="user-comment" placeholder="Comment" rows="4"></textarea>
                 <button class="contact-us-button" type="submit">Send</button>
             </form>
             <picture>
