@@ -13,14 +13,6 @@
   display: block;
 }
 
-.container .catalog-container {
-  margin: 0;
-}
-
-.catalog {
-  box-sizing: border-box;
-}
-
 .section-catalog {
   margin-bottom: 40px;
 }
