@@ -19,18 +19,17 @@ window.addEventListener('load', updateActiveLink);
 // Функція оновлення активного пункту меню
 function updateActiveLink() {
   let index = 0;
+  const threshold = window.innerHeight / 2; // Половина висоти екрана
 
-  // Якщо сторінка знаходиться на самому верху
-  if (window.scrollY === 0) {
-    index = 0; // Перша секція (Home)
-  } else {
-    // Обчислення активної секції
-    sections.forEach((section, i) => {
-      if (window.scrollY + 50 >= section.offsetTop) {
-        index = i;
-      }
-    });
-  }
+  // Обчислення активної секції
+  sections.forEach((section, i) => {
+    const sectionTop = section.getBoundingClientRect().top; // Відстань секції від верхньої частини екрана
+
+    // Секція активна, якщо її верхня межа проходить половину екрану
+    if (sectionTop <= threshold) {
+      index = i;
+    }
+  });
 
   // Очищення класу current-circle для всіх посилань
   document.querySelectorAll('.menu-link, .menu-link-mob').forEach((link) => link.classList.remove('current-circle'));
@@ -76,7 +75,6 @@ function resizeMenu() {
   }
 }
 
-
 // Функція приховування хедера при скролі
 function handleScroll() {
   const currentScrollPosition = window.scrollY;
@@ -89,6 +87,7 @@ function handleScroll() {
 
   lastScrollPosition = currentScrollPosition;
 }
+
 
 
 // Кнопка Catalog
