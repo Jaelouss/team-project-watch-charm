@@ -207,7 +207,6 @@ header {
     align-items: center;
     margin-left: auto;
     gap: 10px;
-    padding: 26px 0;
   }
   .menu-link {
     color: #0c0c0c;
@@ -228,8 +227,12 @@ header {
     transition: fill 0.3s ease-out;
   }
 
-  .header-social-icons:hover,
-  .header-social:focus {
+  .header-social-page:hover .header-social-icons,
+  .header-social-page:focus .header-social-icons {
     fill: #3350e9;
   }
+}
+
+.header-social-page {
+  padding: 8px;
 }

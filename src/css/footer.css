@@ -41,8 +41,8 @@
   fill: #fbfbfb;
   opacity: 0.8;
 }
-.footer-social-icons-svg:hover,
-.footer-social-icons-svg:focus {
+.footer-link:hover .footer-social-icons-svg,
+.footer-link:focus .footer-social-icons-svg {
   opacity: 1;
 }
 

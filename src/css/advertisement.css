@@ -36,6 +36,12 @@
   color: #fbfbfb;
 }
 
+.advertisement-a:hover,
+.advertisement-a:focus {
+  background-color: #fbfbfb;
+  color: #0c0c0c;
+}
+
 @media only screen and (min-resolution: 192dpi) {
   .advertisement-container {
     background-image: url(/img/mob/mob-advertisement@2x.png);
