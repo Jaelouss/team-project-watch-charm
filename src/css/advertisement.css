@@ -1,9 +1,11 @@
 /* ADVERTISEMENT */
-
+.advertisement-thumb {
+    padding: 30px 20px;
+}
 
 .advertisement-container {
     background-color: #0C0C0C;
-    background-image: url(../img/mob/mob-advertisement.png);
+    background-image: url(/img/mob/mob-advertisement.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -17,10 +19,8 @@
     font-weight: 600;
     font-size: 32px;
     line-height: 1;
-    letter-spacing: -0.02em;
     color: #fbfbfb;
-    padding-bottom: 28px;
-    max-width: 279px;
+    margin-bottom: 28px;
 }
 
 .advertisement-span {
@@ -29,14 +29,10 @@
 
 .advertisement-btn {
     font-size: 14px;
-    line-height: 1.29;
-    text-align: center;
-
     background-color: transparent;
     border: 1px solid rgba(251, 251, 251, 0.15);
     border-radius: 16px;
-    width: 160px;
-    height: 48px;
+    padding: 15px 44px;
 }
 
 .advertisement-a {
@@ -45,40 +41,46 @@
 
 @media only screen and (min-resolution: 192dpi) {
     .advertisement-container {
-        background-image: url(../img/mob/mob-advertisement@2x.png);
+        background-image: url(/img/mob/mob-advertisement@2x.png);
     }
 }
 
 @media only screen and (min-width: 768px) {
     .advertisement-container {
-        background-image: url(../img/tab/tab-advertisement.png);
+        background-image: url(/img/tab/tab-advertisement.png);
         padding: 80px 64px;
     }
 
     @media only screen and (min-resolution: 192dpi) {
         .advertisement-container {
-            background-image: url(../img/tab/tab-advertisement@2x.png);
+            background-image: url(/img/tab/tab-advertisement@2x.png);
         }
     }
 
     .advertisement-text,
     .advertisement-span {
         font-size: 48px;
-        max-width: 576px;
+        margin-bottom: 32px;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .advertisement-container {
-        background-image: url(../img/pc/advertisement.png);
-        padding: 80px;
+        background-image: url(/img/pc/advertisement.png);
+        padding: 83px 80px;
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
     }
 
     @media only screen and (min-resolution: 192dpi) {
         .advertisement-container {
-            background-image: url(../img/pc/advertisement@2x.png);
+            background-image: url(/img/pc/advertisement@2x.png);
         }
+    }
+
+    .advertisement-text {
+        max-width: 690px;
+        letter-spacing: -0.02em;
     }
 }
