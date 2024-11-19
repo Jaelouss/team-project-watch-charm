@@ -90,46 +90,35 @@ function handleScroll() {
   lastScrollPosition = currentScrollPosition;
 }
 
-document.getElementById('toggle-btn').addEventListener('click', function() {
-  const items = document.querySelectorAll('.catalog-list-item.hidden');
-  
-  // Перевіряємо ширину екрану
-  if (window.innerWidth < 768) {
-    let isHidden = false;
-    
-    // Перевіряємо, чи всі елементи сховані
-    items.forEach(item => {
-      if (item.style.display === 'none' || item.style.display === '') {
-        isHidden = true;
-      }
-    });
 
-    // Якщо елементи сховані, показуємо їх, інакше - ховаємо
-    items.forEach(item => {
-      if (isHidden) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
+// Кнопка Catalog
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("toggle-btn");
+  const hiddenItems = document.querySelectorAll(".catalog-list-item.hidden");
+  const mobileBreakpoint = 768; // Ширина, менша за цю, вважається мобільною
 
-    // Змінюємо текст кнопки
-    if (isHidden) {
-      this.innerText = 'Hide';
+  const updateVisibility = () => {
+    const isMobile = window.innerWidth < mobileBreakpoint;
+
+    if (isMobile) {
+      toggleBtn.style.display = "block";
+      hiddenItems.forEach(item => item.style.display = "none");
+      toggleBtn.textContent = "Show more";
     } else {
-      this.innerText = 'Show More';
+      toggleBtn.style.display = "none";
+      hiddenItems.forEach(item => item.style.display = "block");
     }
-  }
-});
+  };
 
-// Відслідковуємо зміну розміру екрану
-window.addEventListener('resize', function() {
-  // Якщо ширина екрану >= 768px, всі сховані елементи повинні бути показані
-  if (window.innerWidth >= 768) {
-    const items = document.querySelectorAll('.catalog-list-item.hidden');
-    items.forEach(item => {
-      // Встановлюємо display: block
-      item.style.display = 'block';
+  toggleBtn.addEventListener("click", () => {
+    const isHidden = hiddenItems[0].style.display === "none";
+    hiddenItems.forEach(item => {
+      item.style.display = isHidden ? "block" : "none";
     });
-  }
+    toggleBtn.textContent = isHidden ? "Hide" : "Show more";
+  });
+
+  // Викликати при завантаженні та зміні розміру вікна
+  updateVisibility();
+  window.addEventListener("resize", updateVisibility);
 });

@@ -1,86 +1,86 @@
 /* ADVERTISEMENT */
 .advertisement-thumb {
-    padding: 30px 20px;
+  padding: 30px 20px;
 }
 
 .advertisement-container {
-    background-color: #0C0C0C;
-    background-image: url(/img/mob/mob-advertisement.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 60px 28px;
-    border-radius: 30px;
-    overflow: hidden;
+  background-color: #0c0c0c;
+  background-image: url(/img/mob/mob-advertisement.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 60px 28px;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 .advertisement-text,
 .advertisement-span {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 1;
-    color: #fbfbfb;
-    margin-bottom: 28px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  color: #fbfbfb;
+  margin-bottom: 28px;
 }
 
 .advertisement-span {
-    color: rgba(251, 251, 251, 0.5);
+  color: rgba(251, 251, 251, 0.5);
 }
 
 .advertisement-btn {
-    font-size: 14px;
-    background-color: transparent;
-    border: 1px solid rgba(251, 251, 251, 0.15);
-    border-radius: 16px;
-    padding: 15px 44px;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid rgba(251, 251, 251, 0.15);
+  border-radius: 16px;
+  padding: 15px 44px;
 }
 
 .advertisement-a {
-    color: #fbfbfb;
+  color: #fbfbfb;
 }
 
 @media only screen and (min-resolution: 192dpi) {
-    .advertisement-container {
-        background-image: url(/img/mob/mob-advertisement@2x.png);
-    }
+  .advertisement-container {
+    background-image: url(/img/mob/mob-advertisement@2x.png);
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  .advertisement-container {
+    background-image: url(/img/tab/tab-advertisement.png);
+    padding: 80px 64px;
+  }
+
+  @media only screen and (min-resolution: 192dpi) {
     .advertisement-container {
-        background-image: url(/img/tab/tab-advertisement.png);
-        padding: 80px 64px;
+      background-image: url(/img/tab/tab-advertisement@2x.png);
     }
+  }
 
-    @media only screen and (min-resolution: 192dpi) {
-        .advertisement-container {
-            background-image: url(/img/tab/tab-advertisement@2x.png);
-        }
-    }
-
-    .advertisement-text,
-    .advertisement-span {
-        font-size: 48px;
-        margin-bottom: 32px;
-    }
+  .advertisement-text,
+  .advertisement-span {
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
+  .advertisement-container {
+    background-image: url(/img/pc/advertisement.png);
+    padding: 80px 80px 83px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media only screen and (min-resolution: 192dpi) {
     .advertisement-container {
-        background-image: url(/img/pc/advertisement.png);
-        padding: 83px 80px;
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
+      background-image: url(/img/pc/advertisement@2x.png);
     }
+  }
 
-    @media only screen and (min-resolution: 192dpi) {
-        .advertisement-container {
-            background-image: url(/img/pc/advertisement@2x.png);
-        }
-    }
-
-    .advertisement-text {
-        max-width: 690px;
-        letter-spacing: -0.02em;
-    }
+  .advertisement-text {
+    max-width: 690px;
+    letter-spacing: -0.02em;
+  }
 }
