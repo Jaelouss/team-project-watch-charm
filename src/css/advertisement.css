@@ -27,15 +27,12 @@
   color: rgba(251, 251, 251, 0.5);
 }
 
-.advertisement-btn {
+.advertisement-a {
   font-size: 14px;
   background-color: transparent;
   border: 1px solid rgba(251, 251, 251, 0.15);
   border-radius: 16px;
   padding: 15px 44px;
-}
-
-.advertisement-a {
   color: #fbfbfb;
 }
 
